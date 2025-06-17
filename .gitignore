@@ -1,0 +1,45 @@
+# ---- Global ----
+*.log
+.DS_Store
+.env
+.env.*
+__pycache__/
+*.py[cod]
+*.sqlite3
+.vscode/
+*.swp
+*.bak
+
+# ---- Backend (Flask in /server) ----
+server/instance/
+server/.venv/
+server/venv/
+server/*.pyc
+server/__pycache__/
+server/*.pyo
+server/*.db
+server/.pytest_cache/
+server/.mypy_cache/
+server/*.egg-info/
+
+# Flask debug config
+server/.flaskenv
+
+# ---- Frontend (Vite + React in /client) ----
+client/node_modules/
+client/.env
+client/.env.*
+client/dist/
+client/.vite/
+client/.parcel-cache/
+client/.eslintcache
+
+# Logs
+client/npm-debug.log*
+client/yarn-debug.log*
+client/yarn-error.log*
+client/pnpm-debug.log*
+
+# ---- OS-specific ----
+Thumbs.db
+ehthumbs.db
