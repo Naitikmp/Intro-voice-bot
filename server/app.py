@@ -6,7 +6,7 @@ from elevenlabs_tts import elevenlabs_tts
 import os
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["https://intro-voice-bot.vercel.app"], supports_credentials=True)
 
 @app.route('/api/chat',methods=['POST'])
 def chat():
