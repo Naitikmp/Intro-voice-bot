@@ -3,6 +3,7 @@ from flask import Flask,request, send_file,jsonify,after_this_request
 from flask_cors import CORS
 from openai_client import get_response
 from elevenlabs_tts import elevenlabs_tts
+from gtts_tts import google_tts
 import os
 import traceback
 
@@ -26,7 +27,8 @@ def chat():
         bot_reply = get_response(user_input)
         print("Bot reply:", bot_reply)  # Debug
 
-        audio_stream = elevenlabs_tts(bot_reply)
+        # audio_stream = elevenlabs_tts(bot_reply)
+        audio_stream = google_tts(text = bot_reply)
         print("TTS audio stream generated")  # Debug
 
         # Convert audio stream to base64
